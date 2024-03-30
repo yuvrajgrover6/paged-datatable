@@ -179,6 +179,7 @@ class _FiltersDialog<TKey extends Comparable, TResultId extends Comparable,
 
   @override
   Widget build(BuildContext context) {
+    final deviceWidth = MediaQuery.of(context).size.width;
     return Stack(
       fit: StackFit.loose,
       children: [
@@ -186,7 +187,7 @@ class _FiltersDialog<TKey extends Comparable, TResultId extends Comparable,
             top: rect.top,
             left: rect.left,
             child: Container(
-              width: MediaQuery.of(context).size.width / 3,
+              width: deviceWidth>500 ? MediaQuery.of(context).size.width/3 : MediaQuery.of(context).size.width  ,
               decoration: const BoxDecoration(
                   color: Colors.white,
                   boxShadow: [BoxShadow(blurRadius: 3, color: Colors.black54)],
