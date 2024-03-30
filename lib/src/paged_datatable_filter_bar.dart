@@ -187,7 +187,7 @@ class _FiltersDialog<TKey extends Comparable, TResultId extends Comparable,
             top: rect.top,
             left: rect.left,
             child: Container(
-              width: deviceWidth>500 ? MediaQuery.of(context).size.width/3 : MediaQuery.of(context).size.width  ,
+              width: deviceWidth < 500 ?  MediaQuery.of(context).size.width ? MediaQuery.of(context).size.width / 2 : MediaQuery.of(context).size.width / 2  ,
               decoration: const BoxDecoration(
                   color: Colors.white,
                   boxShadow: [BoxShadow(blurRadius: 3, color: Colors.black54)],
