@@ -62,9 +62,9 @@ class _PagedDataTableFooter<
                                       contentPadding: EdgeInsets.symmetric(
                                           horizontal: 6, vertical: 8),
                                       border: OutlineInputBorder()),
-                                  style: theme.footerTextStyle
-                                          ?.copyWith(fontSize: 14) ??
-                                      const TextStyle(fontSize: 14),
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 14),
                                   onChanged:
                                       state.tableState == _TableState.loading
                                           ? null
