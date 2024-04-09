@@ -62,9 +62,9 @@ class _PagedDataTableFooter<
                                       contentPadding: EdgeInsets.symmetric(
                                           horizontal: 6, vertical: 8),
                                       border: OutlineInputBorder()),
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 14),
+                                  style:  theme.footerTextStyle
+                                          ?.copyWith(fontSize: 14) ??
+                                      const TextStyle(fontSize: 14),
                                   onChanged:
                                       state.tableState == _TableState.loading
                                           ? null
@@ -75,7 +75,8 @@ class _PagedDataTableFooter<
                                             },
                                   items: theme.configuration.pageSizes!
                                       .map((e) => DropdownMenuItem(
-                                          value: e, child: Text(e.toString())))
+                                          value: e, child: Text(e.toString(),style:
+                                                TextStyle(color: Colors.black))))
                                       .toList()),
                             )
                           ],
