@@ -91,8 +91,9 @@ class _PopupMenuRoute<T> extends PopupRoute<T> {
   @override
   bool get barrierDismissible => true;
 
-  @override
-  Color? get barrierColor => null;
+@override
+Color? get barrierColor => Colors.transparent;
+
 
   @override
   final String barrierLabel;
